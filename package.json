@@ -1,6 +1,6 @@
 {
   "name": "@illinois/react-use-local-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React hook that persists and syncs state with local storage",
   "main": "lib/index.js",
   "files": [
