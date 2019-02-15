@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 
-/*
 const isClient = typeof window !== 'undefined'
 
 const useLocalStorage = <T>(key: string, initialValue: T): [T, (value: T) => void] => {
@@ -31,31 +30,6 @@ const useLocalStorage = <T>(key: string, initialValue: T): [T, (value: T) => voi
     }
   }
   const setState = (value: T) => {
-    window.localStorage.setItem(key, JSON.stringify(value))
-    updateState(value)
-  }
-  useEffect(() => {
-    window.addEventListener('storage', localStorageChanged)
-    return () => {
-      window.removeEventListener('storage', localStorageChanged)
-    }
-  })
-  return [state, setState]
-}
-*/
-
-const useLocalStorage = (key, initialValue) => {
-  if (window.localStorage.getItem(key) === null) {
-    window.localStorage.setItem(key, JSON.stringify(initialValue))
-  }
-  const localStorageValue = JSON.parse(window.localStorage.getItem(key) as string)
-  const [state, updateState] = useState(localStorageValue)
-  const localStorageChanged = e => {
-    if (e.key === key) {
-      updateState(JSON.parse(e.newValue))
-    }
-  }
-  const setState = value => {
     window.localStorage.setItem(key, JSON.stringify(value))
     updateState(value)
   }
