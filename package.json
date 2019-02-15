@@ -1,0 +1,44 @@
+{
+  "name": "@illinois/react-use-local-storage",
+  "version": "1.0.0",
+  "description": "React hook that persists and syncs state with local storage",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/illinois/react-use-local-storage.git"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "react-hooks"
+  ],
+  "author": "Nathan Walters (@nwalters512)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/illinois/react-use-local-storage/issues"
+  },
+  "homepage": "https://github.com/illinois/react-use-local-storage#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@storybook/addon-actions": "^4.1.11",
+    "@storybook/addon-links": "^4.1.11",
+    "@storybook/addons": "^4.1.11",
+    "@storybook/react": "^4.1.11",
+    "@types/react": "^16.8.3",
+    "@types/storybook__react": "^4.0.1",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.5",
+    "react": "^16.8.2",
+    "typescript": "^3.3.3"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "dependencies": {}
+}
