@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "React hook that persists and syncs state with local storage",
   "main": "lib/index.js",
+  "files": [
+    "lib/"
+  ],
   "scripts": {
     "build": "tsc",
     "storybook": "start-storybook -p 6006",
