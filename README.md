@@ -14,7 +14,7 @@ This hook functions similarly to `useState`, with the exception of the the cavea
 import useLocalStorage from '@illinois/react-use-local-storage'
 
 const MyComponent = () => {
-  const [value, setValue] = useLocalStorage('value-key', 0)
+  const [count, setCount] = useLocalStorage('value-key', 0)
   return (
     <>
       <div>Count: {count}</div>
