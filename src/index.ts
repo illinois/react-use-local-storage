@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 
 const isClient = typeof window !== 'undefined'
 
@@ -29,10 +29,10 @@ const useLocalStorage = <T>(key: string, initialValue: T): [T, (value: T) => voi
       updateState(JSON.parse(e.newValue as string))
     }
   }
-  const setState = (value: T) => {
+  const setState = useCallback((value: T) => {
     window.localStorage.setItem(key, JSON.stringify(value))
     updateState(value)
-  }
+  }, [key, updateState])
   useEffect(() => {
     window.addEventListener('storage', localStorageChanged)
     return () => {
