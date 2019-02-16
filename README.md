@@ -5,7 +5,7 @@ React hook that persists state with the [`localStorage`](https://developer.mozil
 ## Getting started
 
 ```
-npm i @illinois/react-use-local-state
+npm i @illinois/react-use-local-storage
 ```
 
 This hook functions similarly to `useState`, with the exception of the the caveats listed below. If your state is easily encodable in JSON and you don't use lazy initialization or functional updates, it should be easy to migrate from `useState`. You'll need to provide a key for getting/setting the item in local storage.
